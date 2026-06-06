@@ -1,97 +1,372 @@
 <!DOCTYPE html>
-<html lang="en">
 
-<header>
-     <div class="nav1">
-        <nav>
-            <a href="#about">About</a>
-            <a href="#form">schedule session</a>
-            <a href="services">services</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </div>
-</header>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Guidance website</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="script.js"></script>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Services | Teleposta Guidance and Counseling</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&amp;family=Manrope:wght@100..900&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e1e3e4",
+                    "on-primary-fixed": "#001f2a",
+                    "surface": "#f8f9fa",
+                    "on-error": "#ffffff",
+                    "secondary": "#3e6658",
+                    "tertiary-fixed": "#ebe2c8",
+                    "inverse-surface": "#2e3132",
+                    "on-primary": "#ffffff",
+                    "background": "#f8f9fa",
+                    "surface-bright": "#f8f9fa",
+                    "on-background": "#191c1d",
+                    "on-primary-container": "#a3d0e7",
+                    "surface-variant": "#e1e3e4",
+                    "secondary-fixed-dim": "#a5d0be",
+                    "primary-fixed-dim": "#a0cde4",
+                    "secondary-container": "#c0ecda",
+                    "surface-container": "#edeeef",
+                    "on-surface-variant": "#41484c",
+                    "on-surface": "#191c1d",
+                    "primary-fixed": "#bfe9ff",
+                    "on-tertiary": "#ffffff",
+                    "primary-container": "#2d5a6e",
+                    "on-error-container": "#93000a",
+                    "on-tertiary-container": "#d2cab0",
+                    "tertiary": "#433e2b",
+                    "inverse-on-surface": "#f0f1f2",
+                    "secondary-fixed": "#c0ecda",
+                    "tertiary-fixed-dim": "#cec6ad",
+                    "surface-dim": "#d9dadb",
+                    "surface-container-low": "#f3f4f5",
+                    "on-tertiary-fixed": "#1f1c0b",
+                    "on-primary-fixed-variant": "#1d4c5f",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#376478",
+                    "error-container": "#ffdad6",
+                    "primary": "#104356",
+                    "tertiary-container": "#5a5540",
+                    "surface-container-high": "#e7e8e9",
+                    "error": "#ba1a1a",
+                    "inverse-primary": "#a0cde4",
+                    "on-secondary-container": "#446c5e",
+                    "on-secondary-fixed": "#002117",
+                    "outline": "#71787c",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed-variant": "#264e41",
+                    "outline-variant": "#c1c7cc",
+                    "on-tertiary-fixed-variant": "#4c4733"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "container-max": "1200px",
+                    "margin-desktop": "64px",
+                    "section-padding": "80px",
+                    "margin-mobile": "16px",
+                    "gutter": "24px",
+                    "base": "8px"
+            },
+            "fontFamily": {
+                    "display-lg": ["Manrope"],
+                    "body-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "headline-lg-mobile": ["Manrope"],
+                    "headline-lg": ["Manrope"],
+                    "label-sm": ["Manrope"],
+                    "title-md": ["Manrope"]
+            },
+            "fontSize": {
+                    "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["28px", {"lineHeight": "36px", "fontWeight": "600"}],
+                    "headline-lg": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                    "label-sm": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                    "title-md": ["20px", {"lineHeight": "28px", "fontWeight": "500"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            display: inline-block;
+            vertical-align: middle;
+        }
+        .soft-shadow {
+            box-shadow: 0 20px 40px -15px rgba(16, 67, 86, 0.08);
+        }
+        .hero-gradient {
+            background: linear-gradient(135deg, #f8f9fa 0%, #edeeef 100%);
+        }
+    </style>
 </head>
-
-<body>
-    <h1>Teleposta guidance and counseling</h1>
-    <p id="paragraph1">Welcome to Teleposta guidance and counseling website.<br>
-        We are glad that you choose us to help you overcome <br>your issues and we assure you that you 
-        will leave here better than you came.
-    </p>
-
-
-    <section id="about">
-        <h2>About Teleposta guidance and counseling</h2>
-        <div class="about-text">
-            <p>Our specialized services are designed to help you and guide you through<br>
-                your journey of life.
-            </p>
-            <p>We believe and know that the services offered by our esteemed<br>
-                doctors and psychologists work.Why do we think highly of ourselves you may ask?<br>
-                This is because we get volunteered feedback from our previous patient.<br>
-                And yes the feedback are both negative and positive and we seriously check and try to correct<br>
-                on the negative feedback so as to improve and excel on the services we offer.Check out on the<br> 
-                services we offer.
-            </p>
+<body class="bg-background text-on-background font-body-md overflow-x-hidden">
+<!-- Top Navigation Bar -->
+<header class="fixed top-0 left-0 right-0 z-50 bg-surface dark:bg-inverse-surface shadow-sm docked full-width">
+<div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-lg text-primary dark:text-inverse-primary tracking-tight">
+                Teleposta
+            </div>
+<nav class="hidden md:flex items-center space-x-8">
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-sm text-label-sm" href="#">Home</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-sm text-label-sm" href="#">About</a>
+<a class="text-primary dark:text-inverse-primary font-bold border-b-2 border-primary dark:border-inverse-primary pb-1 font-label-sm text-label-sm" href="#">Services</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-sm text-label-sm" href="#">Our Team</a>
+<a class="text-on-surface-variant dark:text-surface-variant hover:text-primary dark:hover:text-inverse-primary transition-colors font-label-sm text-label-sm" href="#">Contact</a>
+</nav>
+<div class="flex items-center gap-4">
+<button class="hidden lg:block bg-error text-on-error px-6 py-2.5 rounded-full font-label-sm text-label-sm hover:opacity-90 transition-all scale-95 active:scale-90 duration-150">
+                    Crisis Support
+                </button>
+<button class="md:hidden text-primary">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</div>
+</div>
+</header>
+<main class="pt-20">
+<!-- Hero Section -->
+<section class="hero-gradient py-section-padding px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto flex flex-col md:flex-row items-center gap-12">
+<div class="flex-1 text-center md:text-left">
+<h1 class="font-display-lg text-display-lg text-primary mb-6 md:leading-tight">
+                        Compassionate Care <br class="hidden md:block"/> for Every Journey
+                    </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mx-auto md:mx-0 mb-8">
+                        Explore our range of specialized counseling services designed to help you navigate life's challenges with resilience, peace, and professional guidance.
+                    </p>
+<div class="flex flex-wrap justify-center md:justify-start gap-4">
+<a class="bg-primary text-on-primary px-8 py-4 rounded-xl font-label-sm text-label-sm hover:bg-primary-container transition-all soft-shadow" href="#services-grid">
+                            Explore Services
+                        </a>
+<button class="border border-outline text-primary px-8 py-4 rounded-xl font-label-sm text-label-sm hover:bg-surface-container-low transition-all">
+                            Speak with an Advisor
+                        </button>
+</div>
+</div>
+<div class="flex-1 w-full">
+<div class="relative rounded-3xl overflow-hidden aspect-video soft-shadow">
+<img alt="Therapeutic environment" class="w-full h-full object-cover" data-alt="A tranquil, minimalist therapy room featuring soft natural light, plush neutral-toned seating, and lush green indoor plants. The atmosphere is serene and professional, reflecting a safe space for mental health discussions. The color palette uses slate blues and soft greys with high-key lighting to emphasize an empathetic and modern clinical environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvAofyXS5RnHn0UtaPhPgXr2Pqh7HSdPVbrlCLDoQcRX3t6erUh7f5hdezrG_pAfccX0Q3dMpfzkNh4EaozrNK9oJXHAHy7j638QZ0JLoxpHtqszjTdNur9S1s6bYfJn7AOmMqnlzvINNEORuLphra5J0KSZw3f8ykLA2d4-lEPEW8TyXqaoO8N-oOxn5yiTWU9rxva72oiyh1xBpM8PUNpGXD-pHp1_1iSVEWu6VTCriqsFUtiuw3z5aPQLq2-FpHo18PT-7tuQzA"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Grid Section -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface" id="services-grid">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-16">
+<span class="text-secondary font-label-sm text-label-sm tracking-widest uppercase mb-4 block">Our Specializations</span>
+<h2 class="font-headline-lg text-headline-lg md:text-display-lg text-on-surface mb-4">Tailored Therapeutic Support</h2>
+<div class="h-1 w-20 bg-secondary-fixed-dim mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Individual Therapy -->
+<div class="group bg-surface-container-lowest p-8 rounded-[2rem] soft-shadow border border-surface-variant/50 flex flex-col transition-all hover:-translate-y-2 hover:bg-secondary-container/10">
+<div class="w-14 h-14 bg-primary-container text-on-primary-container rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:rotate-3">
+<span class="material-symbols-outlined text-3xl">person</span>
+</div>
+<h3 class="font-headline-lg text-title-md text-on-surface mb-3">Individual Therapy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+                            Personalized sessions focused on self-discovery, emotional regulation, and personal growth in a safe environment.
+                        </p>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-label-sm text-label-sm hover:bg-secondary transition-colors scale-95 active:scale-90">
+                            Book Now
+                        </button>
+</div>
+<!-- Family Counseling -->
+<div class="group bg-surface-container-lowest p-8 rounded-[2rem] soft-shadow border border-surface-variant/50 flex flex-col transition-all hover:-translate-y-2 hover:bg-secondary-container/10">
+<div class="w-14 h-14 bg-secondary-container text-on-secondary-container rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:rotate-3">
+<span class="material-symbols-outlined text-3xl">family_restroom</span>
+</div>
+<h3 class="font-headline-lg text-title-md text-on-surface mb-3">Family Counseling</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+                            Facilitating open communication and resolving conflicts to build healthier, more resilient family bonds.
+                        </p>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-label-sm text-label-sm hover:bg-secondary transition-colors scale-95 active:scale-90">
+                            Book Now
+                        </button>
+</div>
+<!-- Trauma Recovery -->
+<div class="group bg-surface-container-lowest p-8 rounded-[2rem] soft-shadow border border-surface-variant/50 flex flex-col transition-all hover:-translate-y-2 hover:bg-secondary-container/10">
+<div class="w-14 h-14 bg-tertiary-container text-on-tertiary-container rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:rotate-3">
+<span class="material-symbols-outlined text-3xl">healing</span>
+</div>
+<h3 class="font-headline-lg text-title-md text-on-surface mb-3">Trauma Recovery</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+                            Specialized care for healing from past experiences through evidence-based somatic and cognitive therapies.
+                        </p>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-label-sm text-label-sm hover:bg-secondary transition-colors scale-95 active:scale-90">
+                            Book Now
+                        </button>
+</div>
+<!-- Career Guidance -->
+<div class="group bg-surface-container-lowest p-8 rounded-[2rem] soft-shadow border border-surface-variant/50 flex flex-col transition-all hover:-translate-y-2 hover:bg-secondary-container/10">
+<div class="w-14 h-14 bg-primary-fixed-dim text-on-primary-fixed rounded-2xl flex items-center justify-center mb-6 transition-transform group-hover:rotate-3">
+<span class="material-symbols-outlined text-3xl">work_history</span>
+</div>
+<h3 class="font-headline-lg text-title-md text-on-surface mb-3">Career Guidance</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8 flex-grow">
+                            Navigating professional transitions, burnout prevention, and finding purpose in your professional life.
+                        </p>
+<button class="w-full bg-primary text-on-primary py-3 rounded-xl font-label-sm text-label-sm hover:bg-secondary transition-colors scale-95 active:scale-90">
+                            Book Now
+                        </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto bg-surface-container rounded-[3rem] p-12 md:p-20 relative overflow-hidden">
+<div class="relative z-10 flex flex-col lg:flex-row gap-16 items-center">
+<div class="lg:w-1/2">
+<h2 class="font-display-lg text-headline-lg md:text-display-lg text-primary mb-6">Your Path to <br/> Well-being</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-10">
+                            We believe therapy should be accessible and non-intimidating. Our four-step process ensures you are matched with the right professional for your unique needs.
+                        </p>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-sm shrink-0">1</div>
+<div>
+<h4 class="font-label-sm text-on-surface font-bold">Initial Consultation</h4>
+<p class="text-sm text-on-surface-variant">A brief chat to understand your primary concerns.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-sm shrink-0">2</div>
+<div>
+<h4 class="font-label-sm text-on-surface font-bold">Expert Matching</h4>
+<p class="text-sm text-on-surface-variant">We find the therapist best suited to your profile.</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<div class="w-8 h-8 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-bold text-sm shrink-0">3</div>
+<div>
+<h4 class="font-label-sm text-on-surface font-bold">Custom Plan</h4>
+<p class="text-sm text-on-surface-variant">Developing goals and a schedule that fits your life.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:w-1/2">
+<div class="grid grid-cols-2 gap-4">
+<img alt="Therapist profile" class="rounded-3xl h-64 w-full object-cover" data-alt="A professional female therapist sitting in a light-filled office, smiling warmly while taking notes on a tablet. She is dressed in soft neutral colors. The background features a blurred minimalist bookshelf and soft window lighting, conveying a sense of warmth, expertise, and empathetic professionalism characteristic of the Teleposta brand." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfWxGibxYEfv4wrpPnTaCth9Slagj37yfkyZH9OtV62ZTTxGwky6p2LqUFRU-gouM-8fG4_QzWvYG9w41VD1d-DYUD7b64s5mMXjhxpPKTyRJFMX6gegKHNGfz8Y-TYWCupIVKa6a_dihxRIrXrWFrQN0phMWPNU3qDqXu8_thHpnOykmZcGlKkwmfeJApG8301x5sp5M15ftCEG7XWswRuAxYLnSvN29xssXc-CIxOi9fIbhBm03gD48Wz_pc_kBvukIiNS1OFQip"/>
+<img alt="Supportive care" class="rounded-3xl h-64 w-full object-cover mt-8" data-alt="A close-up of two hands gently holding a cup of tea, resting on a soft textured blanket. The lighting is golden and warm, creating a cozy and comforting atmosphere. This abstract visual represents care, safety, and the supportive environment of a counseling session, using a palette of sage green and soft creams." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPzfzcydScnjzUaIIG8Zk0Qqz0KZxQcu_u07nBAU9ERTqovvFnhpG7ABgKYQ6Pckc5Aq36EAyWy7xseDviBpRtZVDZ88Ez6Qk3qI8oHP0bB87o7BdwONsODGJDUgzNcHg09aSZxIb6wjUHxl5EXeJFnCBBM2NwGVFkRJK-PGIrlO2bH-55pzyJbJpE_nBqDuqc_-ZDHtT2kwL_8JDA15HicJ68TWD22B5WlP6WqZMd1TstxPZBxbSCtQCf5mnpMS1GF9V13WEbpad1"/>
+</div>
+</div>
+</div>
+<!-- Abstract Background Elements -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-secondary-fixed opacity-10 rounded-full blur-3xl -mr-32 -mt-32"></div>
+<div class="absolute bottom-0 left-0 w-96 h-96 bg-primary-fixed opacity-10 rounded-full blur-3xl -ml-48 -mb-48"></div>
+</div>
+</section>
+<!-- Testimonials -->
+<section class="py-section-padding px-margin-mobile md:px-margin-desktop bg-surface-container-lowest">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-12">
+<h3 class="font-headline-lg text-headline-lg text-primary">Volunteered Feedback</h3>
+<p class="text-on-surface-variant mt-2">Hear from those who have walked this path with us.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="p-8 border border-outline-variant rounded-2xl italic text-on-surface-variant font-body-md relative">
+<span class="material-symbols-outlined text-secondary-fixed-dim absolute -top-4 left-4 text-4xl">format_quote</span>
+                        "The individual therapy sessions at Teleposta gave me the tools I needed to handle my anxiety. The environment is so calming."
+                        <div class="mt-6 flex items-center gap-3 not-italic">
+<div class="w-10 h-10 rounded-full bg-surface-dim"></div>
+<div>
+<p class="font-bold text-sm text-on-surface">Elena R.</p>
+<p class="text-xs text-secondary">Patient since 2023</p>
+</div>
+</div>
+</div>
+<div class="p-8 border border-outline-variant rounded-2xl italic text-on-surface-variant font-body-md relative">
+<span class="material-symbols-outlined text-secondary-fixed-dim absolute -top-4 left-4 text-4xl">format_quote</span>
+                        "Family counseling helped us reconnect after years of distance. We are grateful for the compassionate guidance."
+                        <div class="mt-6 flex items-center gap-3 not-italic">
+<div class="w-10 h-10 rounded-full bg-surface-dim"></div>
+<div>
+<p class="font-bold text-sm text-on-surface">Mark &amp; Sarah W.</p>
+<p class="text-xs text-secondary">Family Clients</p>
+</div>
+</div>
+</div>
+<div class="p-8 border border-outline-variant rounded-2xl italic text-on-surface-variant font-body-md relative">
+<span class="material-symbols-outlined text-secondary-fixed-dim absolute -top-4 left-4 text-4xl">format_quote</span>
+                        "The career guidance wasn't just about jobs; it was about finding my worth and managing stress effectively."
+                        <div class="mt-6 flex items-center gap-3 not-italic">
+<div class="w-10 h-10 rounded-full bg-surface-dim"></div>
+<div>
+<p class="font-bold text-sm text-on-surface">David K.</p>
+<p class="text-xs text-secondary">Professional Coaching</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-dim mt-section-padding">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter px-margin-mobile md:px-margin-desktop py-12 max-w-container-max mx-auto">
+<div class="space-y-4">
+<div class="font-display-lg text-title-md text-primary dark:text-primary-fixed">Teleposta</div>
+<p class="font-body-md text-body-md text-on-surface-variant opacity-80">
+                    Nurturing mental well-being with empathetic professionalism and modern clinical practices.
+                </p>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-sm text-primary font-bold">Quick Links</h4>
+<a class="text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors font-label-sm" href="#">Crisis Resources</a>
+<a class="text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors font-label-sm" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant opacity-80 hover:opacity-100 hover:text-secondary transition-colors font-label-sm" href="#">Terms of Service</a>
+</div>
+<div class="flex flex-col gap-3">
+<h4 class="font-label-sm text-primary font-bold">Contact Us</h4>
+<p class="text-on-surface-variant opacity-80 font-label-sm">contact@teleposta.com</p>
+<p class="text-on-surface-variant opacity-80 font-label-sm">+1 (555) 000-1234</p>
+<div class="flex gap-4 mt-2">
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">share</span>
+<span class="material-symbols-outlined text-primary cursor-pointer hover:scale-110 transition-transform">mail</span>
+</div>
+</div>
+</div>
+<div class="border-t border-outline-variant/30 py-6 text-center text-on-surface-variant opacity-60 font-label-sm px-margin-mobile">
+            © 2024 Teleposta Guidance and Counseling. All rights reserved.
         </div>
-    </section>
-    <form action="submit.php" method="post" autocomplete="off" id="form" > 
-        <fieldset>
-            <legend>personal information</legend>
-            <label for="name">Name</label>
-            <input type="text" id="name" name="name" required><br><br>
+</footer>
+<script>
+        // Micro-interaction for service cards
+        document.querySelectorAll('.group').forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                const icon = card.querySelector('.material-symbols-outlined');
+                if (icon) icon.style.fontVariationSettings = "'FILL' 1, 'wght' 400";
+            });
+            card.addEventListener('mouseleave', () => {
+                const icon = card.querySelector('.material-symbols-outlined');
+                if (icon) icon.style.fontVariationSettings = "'FILL' 0, 'wght' 400";
+            });
+        });
 
-            <label for age="age">Age:</label>
-            <input type="number" id="age" name="age" min="16" max="100" required><br><br>
-
-            <lable for="email">Email:</lable>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="telephone">phoneNo:</label>
-            <input type="text" id="telephone" name="telephone" ><br><br>
-
-            <label for="gender">Gender:</label>
-            <input type="radio" id="male" name="gender" value="male">Male
-            <input type="radio" id="female" name="gender" value="female">Female
-            <input type="radio" id="other" namer="gender" value="other">Other<br><br>
-
-            <label for="county">county</label>
-            <select name="county" id="county">
-                <option value="1">Nairobi</option>
-                <option value="2">Kiambu</option>
-                <option value="3">Kajiado</option>
-                <option value="4">Machakos</option>
-                <option value="5">Mombasa</option>
-                <option value="6">Kisumu</option>
-                <option value="7">Turkana</option>
-                <option value="8">Garissa</option>
-                <option value="9">Nyeri</option>
-                <option value="10">Nakuru</option>    
-            </select><br><br>
-
-            <label for="day">Day:</label>
-            <select name="day" id="day">
-                <option value="1">Monday</option>
-                <option value="2">Tuesday</option>
-                <option value="3">Wednesday</option>
-                <option value="4">Thursday</option>
-                <option value="5">Friday</option>
-            </select><br><br>
-
-            <label for="comments">Send a message:</label>
-            <textarea id="comment" name="comment" rows="5" cols="30" placeholder="write here your issue........"></textarea><br><br>
-
-            <input type="submit" value="submit">
-
-            <input type="reset" value="reset">
-        </fieldset>
-    </form>
-</body>
-</html>
+        // Smooth scroll for anchors
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body></html>
