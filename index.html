@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guidance website</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div class="nav1">
+        <nav>
+            <a href="#about">About</a>
+            <a href="#"id="schedule-btn" onclick="toggleForm(event)">schedule session</a>
+            <a href="#services">services</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </div>
+</header>
+
+    <div class="hero">
+        <div class="hero-image"></div>
+        <div class="hero-text">
+            <span class="hero-badge">Guidance &amp; Counseling in Nairobi</span>
+            <h1>Teleposta guidance and counseling</h1>
+            <p id="paragraph1">We are glad that you chose us to help you overcome your challenges.
+                We assure you that you will leave here better than you came.
+            </p>
+            <div class="hero-buttons">
+                <a href="#" onclick="toggleForm(event)" class="btn-primary">Book a session</a>
+                <a href="#about" class="btn-secondary">Learn more</a>
+            </div>
+        </div>
+    </div>
+
+    <section id="about">
+        <h2>About Teleposta guidance and counseling</h2>
+        <div class="about-text">
+            <p>Our specialized services are designed to help you and guide you through
+                your journey of life.
+            </p>
+            <p>We believe and know that the services offered by our esteemed
+                doctors and psychologists work. Why do we think highly of ourselves you may ask?
+                This is because we get volunteered feedback from our previous patients.
+                And yes the feedback are both negative and positive and we seriously check and try to correct
+                on the negative feedback so as to improve and excel on the services we offer. Check out the
+                services we offer.
+            </p>
+        </div>
+    </section>
+
+    <section id="services">
+        <h2>Services offered at Teleposta Guidance and Counseling Organization</h2>
+        <div class="services-list">
+
+            <div class="service-card">
+                <h3>1. Therapy</h3>
+                <p>We offer both in-person and virtual therapy sessions tailored to your comfort and convenience. 
+                   Our licensed therapists work with you at your own pace, helping you navigate personal challenges, 
+                   emotional difficulties, and mental health concerns. Whether you prefer to meet face-to-face or 
+                   from the comfort of your home, both options deliver the same high standard of professional care.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>2. Counseling</h3>
+                <p>Our counseling services provide a safe and confidential space where you can openly discuss 
+                   what is on your mind. Our experienced counselors guide you through life's difficulties — 
+                   whether related to relationships, stress, grief, career, or personal growth. Through structured 
+                   sessions, we help you develop practical coping strategies and build a clearer path forward.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <form action="submit.php" method="post" autocomplete="off" id="form"> 
+        <fieldset>
+            <legend>personal information</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="age">Age:</label>
+            <input type="number" id="age" name="age" min="16" max="100" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="telephone">phoneNo:</label>
+            <input type="text" id="telephone" name="telephone"><br><br>
+
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male">Male
+            <input type="radio" id="female" name="gender" value="female">Female
+            <input type="radio" id="other" name="gender" value="other">Other<br><br>
+
+            <label for="county">county</label>
+            <select name="county" id="county">
+                <option value="1">Nairobi</option>
+                <option value="2">Kiambu</option>
+                <option value="3">Kajiado</option>
+                <option value="4">Machakos</option>
+                <option value="5">Mombasa</option>
+                <option value="6">Kisumu</option>
+                <option value="7">Turkana</option>
+                <option value="8">Garissa</option>
+                <option value="9">Nyeri</option>
+                <option value="10">Nakuru</option>    
+            </select><br><br>
+
+            <label for="day">Day:</label>
+            <select name="day" id="day">
+                <option value="1">Monday</option>
+                <option value="2">Tuesday</option>
+                <option value="3">Wednesday</option>
+                <option value="4">Thursday</option>
+                <option value="5">Friday</option>
+            </select><br><br>
+
+            <label for="comments">Send a message:</label>
+            <textarea id="comment" name="comment" rows="5" cols="30" placeholder="write here your issue........"></textarea><br><br>
+
+            <input type="submit" value="submit">
+            <input type="reset" value="reset">
+        </fieldset>
+    </form>
+
+    <section id="contact">
+        <div class="contact-details">
+            <p id="phoneNo">Call: 0712873465</p>
+            <p id="email-address">Email us at: teleposta@gamil.com</p>
+            <p id="location">we are located at teleposta building, floor 19. Come visit us!</p>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
